@@ -17,6 +17,11 @@ const router = createRouter({
       component: JobsView,
     },
     {
+      path: "/jobs/:id",
+      name: "job",
+      component: () => import("@/views/JobView.vue"),
+    },
+    {
       path: "/:catchAll(.*)",
       name: "not-found",
       component: NotFoundView,
